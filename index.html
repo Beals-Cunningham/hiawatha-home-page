@@ -484,7 +484,7 @@
         }
     </style>
 
-<!-- ------- This final style block is for page styles on this page. ------- -->
+<!-- - This final style block is for page styles on this page/the header. -- -->
 <!-- ------- Most of these styles should be migrated somewhere else, ------- -->
 <!-- ----------------- but it's not clear where right now. ----------------- -->
 <!-- ---------------------- Leave them alone for now. ---------------------- -->
@@ -494,11 +494,18 @@
         #header {
             height: 13rem;
             width: 100%;
-            padding: 3rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            padding-top:2rem;
+            /* The top padding is different because the spacer row changes things*/
+            margin-bottom:0;
+            padding-bottom:0;
+            border-top: solid 1px var(--grey-dark);
+            /* This is currently needed because of the analytics placeholder text. Remove when analytics is added */
         }
 
         #logo{
-            height: 100%;
+            height: 7.5rem;
             width: auto;
         }
 
@@ -509,15 +516,20 @@
         <!-- --------------------- I like having a #site div. ---------------------- -->
         <!-- ---------- It's not strictly necessary and could be removed. ---------- -->
 
+        <!-- ------------- This is the header- move to the Header file ------------- -->
+
         <div id="header">
 
-            <div class = "row justify-content-between">
-                <div class = "col-6">
-                    <img src="./img/logo.png" alt="logo" id = "logo">
+            <div class = "row justify-content-between m-0 h-100">
+                <div class = "col-5">
+                    <img src="../../../../img/logos/logo.png" alt="logo" id = "logo">
                 </div>
 
-                <div class = "col-6">
-                    <table class = "w-100">
+                <div class = "col-7">
+                    <table class = "w-100 h-100">
+
+                        <!-- - This first row has the search, customer portal, and zip code search - -->
+
                         <tr class = "row w-100">
                             <td class = "w-100 row justify-content-between align-items-center">
                                 <div class = "row align-items-center col-4">
@@ -542,17 +554,65 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                
                             </td>
                         </tr>
-                        <tr class = "row"></tr>
+
+                        <!-- -------------------------- End of first row --------------------------- -->
+
+                        <!-- ------------------- The second row is a spacer row -------------------- -->
+
+                        <tr style = "height:2rem">
+                            <td></td>
+                        </tr>
+
+                        <!-- --------------------------- End second row --------------------------- -->
+
+                        <!-- -------------------- The third row has the navbar -------------------- -->
+
+                        <tr class = "w-100 mt-4">
+                            <td>
+                                <nav class = "navbar navbar-expand-lg navbar-light pb-0 mb-0 h-100">
+                                    <ul class = "navbar-nav w-100 row pb-0 mb-0 h-100">
+                                        <li class="nav-item col p-0"> <a class="nav-link text-center font-weight-semibold small" href="#">New Equipment</a> </li>
+                                        <li class="nav-item col p-0"> <a class="nav-link text-center font-weight-semibold small" href="#">Used Equipment</a> </li>
+                                        <li class="nav-item col p-0"> <a class="nav-link text-center font-weight-semibold small" href="#">Parts</a> </li>
+                                        <li class="nav-item col p-0"> <a class="nav-link text-center font-weight-semibold small" href="#">Service</a> </li>
+                                        <li class="nav-item col p-0"> <a class="nav-link text-center font-weight-semibold small" href="#">Integrated Solutions</a> </li>
+                                        <li class="nav-item col p-0"> <a class="nav-link text-center font-weight-semibold small" href="#">Locations</a> </li>
+                                        <li class="nav-item col p-0"> <a class="nav-link text-center font-weight-semibold small" href="#">Careers</a> </li>
+                                        <li class="nav-item col p-0"> <a class="nav-link text-center font-weight-semibold small" href="#">About Us</a> </li>
+                                    </ul>
+                                </nav>
+                            </td>
+                        </tr>
+
+                        <!-- ---------------------------- End third row ---------------------------- -->
+
                     </table>
                 </div>
             </div>
             
         </div>
 
+        <!-- ----------------------------- End header ------------------------------ -->
+
+        <!-- --------------------- This is the main content ---------------------- -->
+
+        <!-- ------------------------------- Slider -------------------------------- -->
+
+        {mod}caffeine_slider-sliderMod-0{/mod}	
+
+        <!-- ----------------------------- End slider ------------------------------ -->
+
+
+        <!-- ------------------------- Categories section -------------------------- -->
+        <div id = "featuredCategoriesLabel" class = "row bg-grey-dark">
+            <h2 class = "col-12 text-center text-white font-weight-bold m-0 py-5">Featured Categories</h2>
+        </div>
+
+        <div id = "featuredCategories" class = "row bg-grey p-3">
+
+        </div>
 
     </div>
 </body>
