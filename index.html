@@ -140,7 +140,7 @@
             <div id="cornOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 52rem; background: linear-gradient(to right, rgba(199, 165, 42, 0.5), transparent);"></div>
 
             <!-- ------------ I've added a gradient overlay, as the text is ------------ -->
-            <!-- ------------ unreadable without it. This also necessitated ------------ -->
+            <!-- ------------ unreadable without it. This also necessitated ------------ -->    
             <!-- -------------- adding inline positioning styles. This is -------------- -->
             <!-- -------------- the only inline styling here, everything --------------- -->
             <!-- ------------------------- else is Bootstrap. -------------------------- -->
@@ -152,7 +152,61 @@
             <button class = "btn btn-warning" style = "position:absolute; left:8.2rem; top:75%">Learn More</button>
           </div>
 
+        <!-- ------------------------ End "we are " section ------------------------ -->
+        <!-- ------------ Featured Used Equipment (placeholder for now) ------------ -->
+        <div class = "row bg-grey-dark">
+            <h2 class = "col-12 text-center text-white font-weight-bold m-0 py-5">Featured Used Equipment</h2>
+        </div>
+
+        <div class = "w-100 bg-grey d-flex justify-content-center">
+            <!-- --------------- This is a placeholder, remove this div ---------------- -->
+            <div style = "height:300px"></div>
+        </div>
+
+        <!-- --------------------- End Featured Used Equipment --------------------- -->
+        <!-- ------------------------------ Locations ------------------------------ -->
+
+        <div class = "container bg-grey-dark">
+            <div class = "row gap-3 g-3 py-5">
+                <!-- ------------------------ First column with map ------------------------ -->
+                <div class = "col-4 d-flex flex-column justify-content-center align-items-center">
+                    <h2 class = "text-center text-white font-weight-bold m-0 pb-4">Locations</h2>
+                    <img src = "img/home/locations.png" style = "max-width:400px">
+                </div>
+                <!-- -------------------- Second column: Hiawatha card --------------------- -->
+                <div class = "col-4">
+                    <div class="card">
+                        <img class="card-img-top" src="img/home/hiawatha.png" alt=".card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title font-weight-semibold">Hiawatha</h5> 
+                            <h6 class="card-subtitle mb-2">2000 Oregon Street</h6>
+                            <h6 class="card-subtitle">Hiawatha, KS 66434</h6>
+                            <br/>
+                            <h6 class="card-title font-weight-semibold mb-0"><a href = "tel:785-742-7121">785-742-7121</a></h6> 
+                            <h6 class = "card-text"><span class = "font-weight-semibold">Hours: </span>7:30-5:30 <span id = "hiawathaOpenNow"></span></h6>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+
     </div>
+
+
+    <script>
+        //-- -------- This updates the "open now" text on the Location cards --------
+        document.addEventListener("DOMContentLoaded", function() {
+            let now = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" }).getTime()
+            let hiawathaOpenNow = document.getElementById("hiawathaOpenNow")
+            let moundCityOpenNow = document.getElementById("moundCityOpenNow")
+        //-- ---------- These locations are open from 7:30 AM to 5:30 PM -----------
+        if (now > new Date().setHours(7, 30) && now < new Date().setHours(17, 30)) {
+            hiawathaOpenNow.innerHTML = "Open Now"
+            moundCityOpenNow.innerHTML = "Open Now"
+        }
+        })
+    </script>
 </body>
 
 </html>
