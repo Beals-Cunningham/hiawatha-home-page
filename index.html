@@ -10,8 +10,6 @@
 
 <body>
 
-    <!-- --- The below style block is my own personal reset- it can be removed ----- -->
-
     <style>
         #site {
             width: 100vw;
@@ -29,14 +27,16 @@
         h6 {
             overflow-wrap: break-word;
         }
+
+        p{
+            font-size: 1.3rem;
+        }
     </style>
 
     <div id="site" style="width:100vw;overflow-x:hidden;">
 
         <!-- --------------------- I like having a #site div. ---------------------- -->
         <!-- ---------- It's not strictly necessary and could be removed. ---------- -->
-
-        <!-- ------------- This is the header- move to the Header file ------------- -->
 
 
         <!-- --------------------- This is the main content ---------------------- -->
@@ -132,11 +132,25 @@
         </div>
 
         <!-- ------------------------- End Categories section -------------------------- -->
+
         <!-- -------------------------- "we are " section -------------------------- -->
 
-        <div id = "weAre" >
-            <img src = "img/home/corn.webp" class = "w-100" style = "height:43rem; object-fit: cover;">
-        </div>
+        <div id="weAre" style="position: relative;">
+            <img src="img/home/corn.webp" class="w-100" style="height: 52rem; object-fit: cover; filter: blur(2px);">
+            <div id="cornOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 52rem; background: linear-gradient(to right, rgba(199, 165, 42, 0.5), transparent);"></div>
+
+            <!-- ------------ I've added a gradient overlay, as the text is ------------ -->
+            <!-- ------------ unreadable without it. This also necessitated ------------ -->
+            <!-- -------------- adding inline positioning styles. This is -------------- -->
+            <!-- -------------- the only inline styling here, everything --------------- -->
+            <!-- ------------------------- else is Bootstrap. -------------------------- -->
+          
+            <h2 id="weAreHeadline" class="text-center text-white font-weight-bold" style="position: absolute; top: 25%; left: 8rem; font-size: 4rem; z-index: 1;">We are Hiawatha Implement</h2>
+            <p class = "text-white" style = "width:max(37%, 300px); position: absolute; top: 45%; left: 8.2rem;">
+                Welcome to Hiawatha Implement, where our mission is to "Exceed Customer Expectations by consistently adding more value" through exceptional customer service and support. Our staff's goal is to make sure customers get the right equipment for their operation. Please check out our specials, evaluate our inventory, schedule a service visit, or stop by your local Hiawatha Implement dealer and let one of our professionals assist you.
+            </p>
+            <button class = "btn btn-warning" style = "position:absolute; left:8.2rem; top:75%">Learn More</button>
+          </div>
 
     </div>
 </body>
