@@ -197,15 +197,15 @@
     <script>
         //-- -------- This updates the "open now" text on the Location cards --------
         document.addEventListener("DOMContentLoaded", function() {
-            let now = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" }).getTime()
-            let hiawathaOpenNow = document.getElementById("hiawathaOpenNow")
-            let moundCityOpenNow = document.getElementById("moundCityOpenNow")
-        //-- ---------- These locations are open from 7:30 AM to 5:30 PM -----------
+        let now = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" }).getTime()
+        let hiawathaOpenNow = document.getElementById("hiawathaOpenNow")
+        let moundCityOpenNow = document.getElementById("moundCityOpenNow")
+
         if (now > new Date().setHours(7, 30) && now < new Date().setHours(17, 30)) {
             hiawathaOpenNow.innerHTML = "Open Now"
             moundCityOpenNow.innerHTML = "Open Now"
         }
-        })
+    })
     </script>
 </body>
 
