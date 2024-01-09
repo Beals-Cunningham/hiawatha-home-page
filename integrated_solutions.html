@@ -65,10 +65,14 @@
         </div>
 
         <!-- --------------------------- Connect content --------------------------- -->
-        <div class = "bg-off-white w-100 py-5">
+        <div class = "bg-off-white w-100">
             <div class = "container">
                 <div class = "row justify-content-between align-items-center">
-                    <div class = "col-12 col-sm-12 col-md-9">
+                    <div class = "col-12 col-sm-12 col-md-6 py-5 md-mt-5">
+                        <!-- ---------------- The steps have to have inline styling ---------------- -->
+                        <!-- ----------------- because Bootstrap 4 doesn't have a ------------------ -->
+                        <!-- ---------------------- border-radius: 100% class ---------------------- -->
+
                         <!-- ----------------------------- First step ------------------------------ -->
                         <div class = "d-flex align-items-center">
                             <div class = "bg-black text-center" style = "border-radius:100%;min-width:3rem;">
@@ -83,7 +87,47 @@
                             </div>
                             <h3 class = "text-black font-weight-semibold ml-3">Save contact card to your mobile device</h3>
                         </div>
+                        <!-- ----------------------------- Third step ------------------------------ -->
+                        <div class = "d-flex align-items-center mt-3">
+                            <div class = "bg-black text-center" style = "border-radius:100%;min-width:3rem;">
+                                    <h3 class = "text-white font-weight-semibold p-2 mb-0">3</h3>
+                            </div>
+                            <h3 class = "text-black font-weight-semibold ml-3">Text or call for support</h3>
+                        </div>
+
+                        <!-- ------------------------------ Logos row ------------------------------ -->
+                        <div class = "row justify-content-start align-items-center py-5">
+                            <div class = "col col-auto">
+                                <img src = "img/pages/integratedsolutions/google_play.webp" class = "img-fluid" alt = "Get it on Google Play">
+                            </div>
+                            <div class = "col col-auto">
+                                <img src = "img/pages/integratedsolutions/app_store.webp" class = "img-fluid" alt = "Download on the App Store">
+                            </div>
+                            <div class = "col col-auto">
+                                <img src = "img/pages/integratedsolutions/agrisync.webp" class = "img-fluid" alt = "AgriSync">
+                            </div>
+                        </div>
+
+
                     </div>
+                    <!-- ---------------------------- Image column ----------------------------- -->
+                    <div class = "col-12 col-sm-12 col-md-6">
+                        <img src = "img/pages/integratedsolutions/isteam.png">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- --------------------------- Contact us form --------------------------- -->
+        <div class = "container p-5">
+            <div class = "row bg-grey-dark rounded align-items-center justify-content-center p-5">
+                <!-- -------------------------- Contact Us Today! -------------------------- -->
+                <div class = "col-12 col-sm-12 col-md-6">
+                    <h2 class = "text-white font-weight-semibold">Contact Us Today!</h2>
+                </div>
+                <div class = "col flex-grow-1">
+                    {form}Contact_Us{/form}
                 </div>
             </div>
         </div>
