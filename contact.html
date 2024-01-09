@@ -1,0 +1,102 @@
+<body>
+
+    <style>
+        #site {
+            width: 100vw;
+            overflow-x: hidden;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            overflow-wrap: break-word;
+        }
+
+        p{
+            font-size: 1.3rem;
+        }
+
+        form[name="Contact_Us"] label {
+            color: white !important;
+            font-weight: bold;
+        }
+
+    </style>
+
+    <div id="site" style="width:100vw;overflow-x:hidden;">
+
+        <!-- --------------------- I like having a #site div. ---------------------- -->
+        <!-- ---------- It's not strictly necessary and could be removed. ---------- -->
+
+        <!-- --------------------- This is the main content ---------------------- -->
+        <!-- ----------------------------- Hero image ------------------------------ -->
+        <div class="d-flex justify-content-center align-items-center" style="background-image: url('img/pages/contactus/hero_filtered.webp'); background-size: cover;height:30rem;background-position:center;">
+            <h1 class="text-center page-title text-white font-weight-semibold">Contact Us</h1>
+        </div>
+        <!-- ----------------- For now, I'm reusing the hero image ----------------- -->
+        <!-- ---------------------- from Integrated Solutions ---------------------- -->
+        <!-- --------- Ultimately, hero_filtered.webp should be replaced. ---------- -->
+
+        <div class = "container p-5">
+            <div class = "row align-items-center justify-content-center flex-wrap">
+                <!-- ----------------------------- Form column ----------------------------- -->
+                <div class = "col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 bg-grey-dark rounded  p-5">
+                    <h2 class="text-center text-white font-weight-semibold d-flex flex-col align-items-center justify-content-center">Questions or concerns? Please contact us!</h2>
+                    {form}Contact_Us{/form}
+                </div>
+
+                <div class = "col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 p-5 flex-col align-items-center">
+                    <h2 class="text-center text-black font-weight-semibold pb-3">Our Locations</h2>
+
+                    <div class = "row flex-wrap" id = "locations">
+
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6" style="min-width:23rem;">
+                            <div class="card">
+                                <img class="card-img-top" src="img/home/hiawatha.png" alt=".card-img-top">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title font-weight-semibold">Hiawatha</h5> 
+                                    <h6 class="card-subtitle mb-2">2000 Oregon Street</h6>
+                                    <h6 class="card-subtitle">Hiawatha, KS 66434</h6>
+                                    <br/>
+                                    <h6 class="card-title font-weight-semibold mb-0"><a href = "tel:785-742-7121">785-742-7121</a></h6> 
+                                    <h6 class = "card-text"><span class = "font-weight-semibold">Hours: </span>7:30-5:30 <span id = "hiawathaOpenNow" class="text-green"></span></h6>
+                                    <div class = "d-flex justify-content-start mt-2">
+                                        <button class = "btn btn-success p-2 mr-2">Get Directions</button>
+                                        <button class = "btn btn-primary p-2">Store Details</button>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6" style="min-width:23rem;">
+                            <div class = "card mt-0 mt-md-3 mt-sm-3 mt-lg-0">
+                                <img class="card-img-top" src="img/home/mound city.png" alt=".card-img-top">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title font-weight-semibold">Mound City</h5> 
+                                    <h6 class="card-subtitle mb-2">1410 State Street</h6>
+                                    <h6 class="card-subtitle">Mound City, MO 64470</h6>
+                                    <br/>
+                                    <h6 class="card-title font-weight-semibold mb-0"><a href = "tel:660-442-3814">660-442-3814</a></h6> 
+                                    <h6 class = "card-text"><span class = "font-weight-semibold">Hours: </span>7:30-5:30 <span id = "moundCityOpenNow" class="text-green"></span></h6>
+                                    <div class = "d-flex justify-content-start mt-2">
+                                        <button class = "btn btn-success p-2 mr-2">Get Directions</button>
+                                        <button class = "btn btn-primary p-2">Store Details</button>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
